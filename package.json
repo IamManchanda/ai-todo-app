@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "generate": "drizzle-kit generate",
     "migrate": "drizzle-kit migrate",
-    "studio": "drizzle-kit studio"
+    "studio": "drizzle-kit studio",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,7 @@
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.41.0",
     "openai": "^4.89.1",
-    "pg": "^8.14.1"
+    "pg": "^8.14.1",
+    "readline-sync": "^1.4.10"
   }
 }

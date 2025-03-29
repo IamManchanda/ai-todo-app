@@ -4,7 +4,9 @@ import { db } from "./db/index.js";
 import { todosTable } from "./db/schema.js";
 import readlineSync from "readline-sync";
 
-const client = new OpenAI();
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 async function getAllTodos() {
   const todos = await db.select().from(todosTable);
